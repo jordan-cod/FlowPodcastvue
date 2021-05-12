@@ -21,11 +21,12 @@
       <button id="newmenu" @click.stop.prevent="toggle()"><img src="../assets/header/HeaderMenu.svg" id="HeaderMenu"></button>
       <div id="header-mobile" v-if="isOpen">
         <ul>
-            <li><router-link to="/" class="link-mobile">Home</router-link></li>
-            <li><router-link to="/loja" class="link-mobile">Loja</router-link></li>
-            <li><router-link to="/episodios" class="link-mobile">Episódios</router-link></li>
-            <li><router-link to="/concursos" class="link-mobile">Concursos</router-link></li>
-            <li><router-link to="/membros" class="link-mobile">Membros</router-link></li>
+            <li @click="toggle()"><router-link to="/" class="link-mobile">Home</router-link></li>
+            <li @click="toggle()"><router-link to="/loja" class="link-mobile">Loja</router-link></li>
+            <li @click="toggle()"><router-link to="/episodios" class="link-mobile">Episódios</router-link></li>
+            <li @click="toggle()"><router-link to="/concursos" class="link-mobile">Concursos</router-link></li>
+            <li @click="toggle()"><router-link to="/membros" class="link-mobile">Membros</router-link></li>
+            <li @click="toggle()"><a class="link-mobile  login">Login/Cadastro</a></li>
         </ul>
     </div>
     </header>
@@ -142,7 +143,9 @@ export default {
     left: 0;
     width: 100%;
     background: var(--color-);
-    height: 405px;
+    height: 475px;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, -2px 50px 0px -1px rgba(0,0,0,0);
+    box-shadow: 0px 10px 13px -7px #000000, -2px 50px 0px -1px rgba(0,0,0,0);
   }
   #header-mobile > ul, #header-mobile ul > li{
     width: 100%;
@@ -157,7 +160,13 @@ export default {
   .link-mobile:hover{
     background: var(--color-hover);
   }
+  .login{
+    font-size: 1rem;
+  }
   @media (max-width: 1000px){
+    #header{
+      padding: 0px 20px 0px 0px;
+    }
     #menu-container > nav {
       display: none;
     }
