@@ -52,7 +52,7 @@ export default {
 }
 </script>
 
-<style >
+<style>
     .card-prod img{
         max-width: 100%;
     }
