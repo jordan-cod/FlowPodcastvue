@@ -152,7 +152,6 @@ export default {
     text-align: center;
     height: auto;
   }
-  .link-web::after
   .link-mobile{
     display: block;
     padding: 30px;
