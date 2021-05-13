@@ -50,6 +50,9 @@ export default {
 </script>
 
 <style scoped>
+.active{
+  border-bottom: 2px solid var(--color-hover);
+}
 #header{
     width: 100%;
     height: 98px;
