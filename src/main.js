@@ -14,29 +14,52 @@ const router = new VueRouter({
   routes: [
     {
       path: '/',
-      component: Home
+      component: Home,
+      meta: {
+        title: 'Flow Podcast - A melhor conversa que você vai ouvir.'
+      }
     },
     {
       path: '/loja',
-      component: Shop
+      component: Shop,
+      meta: {
+        title: 'Loja - Flow Podcast'
+      }
     },
     {
       path: '/episodios',
-      component: Eps
+      component: Eps,
+      meta: {
+        title: 'Episódios - Flow Podcast'
+      }
     },
     {
       path: '/concursos',
-      component: Contests
+      component: Contests,
+      meta: {
+        title: 'Concursos - Flow Podcast'
+      }
     },
     {
       path: '/membros',
-      component: Members
+      component: Members,
+      meta: {
+        title: 'Membros - Flow Podcast'
+      }
     },
     {
       path: '/flowcoins',
-      component: Flowcoins
+      component: Flowcoins,
+      meta: {
+        title: 'Flowcoins - Flow Podcast'
+      }
     }
   ]
+})
+
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title
+  next()
 })
 
 Vue.config.productionTip = false

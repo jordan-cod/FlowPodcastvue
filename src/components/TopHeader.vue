@@ -6,11 +6,11 @@
         </div>
         <nav id="web">
           <ul>
-            <li><router-link to="/">Home</router-link></li>
-            <li><router-link to="/loja">Loja</router-link></li>
-            <li><router-link to="/episodios">Episódios</router-link></li>
-            <li><router-link to="/concursos">Concursos</router-link></li>
-            <li><router-link to="/membros">Membros</router-link></li>
+            <li><router-link to="/" class="link-web">Home</router-link></li>
+            <li><router-link to="/loja" class="link-web">Loja</router-link></li>
+            <li><router-link to="/episodios" class="link-web">Episódios</router-link></li>
+            <li><router-link to="/concursos" class="link-web">Concursos</router-link></li>
+            <li><router-link to="/membros" class="link-web">Membros</router-link></li>
           </ul>
         </nav>
       </div>
@@ -152,6 +152,7 @@ export default {
     text-align: center;
     height: auto;
   }
+  .link-web::after
   .link-mobile{
     display: block;
     padding: 30px;
