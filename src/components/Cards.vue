@@ -1,17 +1,20 @@
 <template>
-<div id="cards">
-  <div class="produtos">
+<div>
+  <button @click="addProduct()">add</button>
+  <div id="cards">
+    <div class="produtos" v-for="produto in produtos" :key='produto.id'>
     <div class="produto-border produto">
-      <a href="./loja-produtos/mic-basica.html">
+      <a>
         <div class="card-prod produto-1-img">
-            <img src="../assets/Loja/produto-1/camisa1.jpeg">
+            <img :src="produto.img">
         </div>
         <div class="descricao-produto">
-            <p class="prodname">{{nome}}</p>
-            <p class="prodpreco">R$ {{preco}}</p>
+            <p class="prodname">{{produto.name}}</p>
+            <p class="prodpreco">R$ {{produto.preco}}</p>
         </div>
       </a>
     </div>
+  </div>
   </div>
 </div>
 </template>
@@ -20,39 +23,39 @@
 export default {
   data () {
     return {
-      products: [
+      produtos: [
         {
+          id: 1,
           name: 'Mic Básica',
-          preco: 'R$ 89.90',
-          src: require('../assets/Loja/produto-1/camisa1.jpeg')
-        },
-        {
-          name: 'Flow Core',
-          preco: 'R$ 89.90',
-          src: require('../assets/Loja/produto-2/camisa2.jpeg')
-        },
-        {
-          name: 'Flow Logo',
-          preco: 'R$ 89.90',
-          src: require('../assets/Loja/produto-3/camisa3.jpeg')
-        },
-        {
-          name: 'Monark Head',
-          preco: 'R$ 89.90',
-          src: require('../assets/Loja/produto-4/camisa4.jpeg')
-        },
-        {
-          name: 'Flow Patch',
-          preco: 'R$ 89.90',
-          src: require('../assets/Loja/produto-5/camisa5.jpeg')
+          img: 'https://storage.googleapis.com/flowpodcast.appspot.com/camisetas/01-G8DT87Eq.jpeg',
+          preco: 89.00
         }
       ]
     }
+  },
+  methods: {
+    addProduct (id, name, img, preco) {
+      this.produtos.push('')
+      console.log('foi')
+    }
+  },
+  props: {
+    id: Number,
+    name: String,
+    img: String,
+    preco: Number
   }
 }
 </script>
 
 <style>
+    #cards{
+      margin-top: 30px;
+      margin-bottom: 70px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 25px;
+    }
     .card-prod img{
         max-width: 100%;
     }

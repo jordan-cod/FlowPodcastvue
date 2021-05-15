@@ -4,22 +4,11 @@
     <div>
         <h1>Lançamentos</h1>
     </div>
-    <div class="cards-container">
-        <Cards/>
-        <Cards/>
-        <Cards/>
-        <Cards/>
-    </div>
+    <Cards/>
   </section>
   <section id="camisetas" class="prod">
     <div>
         <h2>Camisetas</h2>
-    </div>
-    <div class="cards-container">
-        <Cards/>
-        <Cards/>
-        <Cards/>
-        <Cards/>
     </div>
   </section>
 </div>
@@ -49,12 +38,5 @@ export default {
     }
     .prod div h1,h2{
         text-align: center;
-    }
-    .cards-container{
-        margin-top: 30px;
-        margin-bottom: 70px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 25px;
     }
 </style>
