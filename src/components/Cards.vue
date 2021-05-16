@@ -1,6 +1,6 @@
 <template>
 <div>
-  <button @click="addProduct()">add</button>
+  <button class="adicionarprod" @click="addProduct()">Adicionar</button>
   <div id="cards">
     <div class="produtos" v-for="produto in produtos" :key='produto.id'>
     <div class="produto-border produto">
@@ -24,18 +24,19 @@ export default {
   data () {
     return {
       produtos: [
-        {
-          id: 1,
-          name: 'Mic Básica',
-          img: 'https://storage.googleapis.com/flowpodcast.appspot.com/camisetas/01-G8DT87Eq.jpeg',
-          preco: 89.00
-        }
       ]
     }
   },
   methods: {
     addProduct (id, name, img, preco) {
-      this.produtos.push('')
+      var product = {}
+      product = {
+        id: 2 + 1,
+        name: 'Flow Core',
+        img: 'https://storage.googleapis.com/flowpodcast.appspot.com/camisetas/01-G8DT87Eq.jpeg',
+        preco: 89.00
+      }
+      this.produtos.push(product)
       console.log('foi')
     }
   },
@@ -76,5 +77,23 @@ export default {
     }
     .produto-border{
         border: 1px solid var(--color-) ;
+    }
+    .adicionarprod{
+      position: absolute;
+      right: 45px;
+      top: 115px;
+      background: var(--color-);
+      border: 1px solid transparent;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      padding: 6px 10px;
+      cursor: pointer;
+      transition-property: background color;
+      transition: .2s linear;
+    }
+    .adicionarprod:hover{
+      background: transparent;
+      border: 1px solid var(--color-);
+      color: var(--color-);
     }
 </style>

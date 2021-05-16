@@ -6,11 +6,11 @@
         </div>
         <nav id="web">
           <ul>
-            <li><router-link to="/" class="link-web">Home</router-link></li>
-            <li><router-link to="/loja" class="link-web">Loja</router-link></li>
-            <li><router-link to="/episodios" class="link-web">Episódios</router-link></li>
-            <li><router-link to="/concursos" class="link-web">Concursos</router-link></li>
-            <li><router-link to="/membros" class="link-web">Membros</router-link></li>
+            <li @click="toggleMenu ('.li-1')" class="li-1 li-remove"><router-link to="/" class="link-web">Home</router-link></li>
+            <li @click="toggleMenu ('.li-2')" class="li-2 li-remove"><router-link to="/loja" class="link-web">Loja</router-link></li>
+            <li @click="toggleMenu ('.li-3')" class="li-3 li-remove"><router-link to="/episodios" class="link-web">Episódios</router-link></li>
+            <li @click="toggleMenu ('.li-4')" class="li-4 li-remove"><router-link to="/concursos" class="link-web">Concursos</router-link></li>
+            <li @click="toggleMenu ('.li-5')" class="li-5 li-remove"><router-link to="/membros" class="link-web">Membros</router-link></li>
           </ul>
         </nav>
       </div>
@@ -42,6 +42,12 @@ export default {
   methods: {
     toggle () {
       this.isOpen = !this.isOpen
+    },
+    toggleMenu (elementoClicado) {
+      document.querySelectorAll('.li-remove').forEach((el) => {
+        el.classList.remove('menu-active')
+      })
+      document.querySelector(elementoClicado).classList.add('menu-active')
     }
   },
   components: {
@@ -165,6 +171,10 @@ export default {
   }
   .login{
     font-size: 1rem;
+  }
+  .menu-active{
+    border-bottom: 2px solid var(--color-);
+    padding: 15px;
   }
   @media (max-width: 1000px){
     #header{

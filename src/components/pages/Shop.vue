@@ -2,14 +2,9 @@
 <div id="loja">
   <section id="lancamentos" class="prod">
     <div>
-        <h1>Lançamentos</h1>
+        <h1>Camisas</h1>
     </div>
     <Cards/>
-  </section>
-  <section id="camisetas" class="prod">
-    <div>
-        <h2>Camisetas</h2>
-    </div>
   </section>
 </div>
 </template>
@@ -29,6 +24,7 @@ export default {
         flex-direction: column;
         align-items: center;
         margin: 0px 100px;
+        min-height: calc(100vh - 225px);
     }
     .prod{
         text-transform: uppercase;
