@@ -96,4 +96,16 @@ export default {
       border: 1px solid var(--color-);
       color: var(--color-);
     }
+    @media (max-width: 1200px){
+        /*Mudando a grid pra 2 colunas*/
+        #cards{
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+     @media (max-width: 992px){
+        /*Mudando a grid de videos pra 1 colunas*/
+        #cards{
+            grid-template-columns: 1fr;
+        }
+    }
 </style>
