@@ -17,11 +17,11 @@
 ### Andamento do projeto
 #### Páginas 
 - [x] Home
-- [ ] Loja
-- [ ] Episódios
-- [ ] Concursos
-- [ ] Membros
-- [ ] Flowcoins
+- [x] Loja
+- [x] Episódios
+- [x] Concursos
+- [x] Membros
+- [x] Flowcoins
 
 #### Back End
 - [ ] Cadastro de usuários
