@@ -60,7 +60,7 @@ export default {
         padding: 0 15px;
         display: flex;
         flex-direction: column;
-        gap: 7px;
+        gap: 10px;
         margin-bottom: 10px;
     }
     .card-btn > img{
