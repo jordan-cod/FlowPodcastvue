@@ -28,7 +28,7 @@
 - [ ] Cadasto de produtos da loja
 - [ ] Cadastro de episódios, concursos e etc.
 
-<p align=center>Visite o site clicando <a href="flow-podcastvue.vercel.app/#/">aqui</a>
+<p align=center>Visite o site clicando <a href="https://flow-podcastvue.vercel.app/#/">aqui</a>
 
 
 
